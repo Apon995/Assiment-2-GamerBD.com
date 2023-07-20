@@ -280,7 +280,6 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   overflow: hidden;
   cursor: pointer;
 }
@@ -289,21 +288,27 @@ p {
   border-radius: 0px;
 }
 .games-box > .game > div > .play-icon {
+  text-align: center;
   position: absolute;
   opacity: 0;
+}
+.games-box > .game > div > .color{
+  background-color: rgba(0, 0, 0, 0.5);
+  position:absolute;
+  width:0;
+  height: 100% ;
 }
 .games-box > .game > div > .play-icon > a {
   text-align: center;
   font-weight: 700;
-  font-size: 18px;
-  border:2px solid #101011;
-  padding: 7px;
-  border-radius: 30px;
+  font-size: 1rem;
+  border: 2px solid #101011;
+  padding: 5px;
+  border-radius: 50%;
   color: #f948b2;
-   
 }
 .games-box > .game > div > .play-icon > p {
-  margin-top:15px; 
+  margin-top: 15px;
   font-weight: 500;
   font-size: 20px;
   background: var(--linear, linear-gradient(90deg, #ff42a5 0%, #ff42a5 100%));
@@ -311,6 +316,10 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.games-box > .game:hover .color{
+  width: 100%;
+}
+
 .games-box > .game > div:hover .play-icon {
   opacity: 1;
 }
